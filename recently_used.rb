@@ -4,7 +4,6 @@ class InvalidInput < Exception
 end
 
 class RecentlyUsedList
-  include Enumerable
 
   def initialize options = {}
     @size = options.fetch(:size) { nil }
