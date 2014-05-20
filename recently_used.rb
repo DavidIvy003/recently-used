@@ -4,6 +4,7 @@ class InvalidInput < Exception
 end
 
 class RecentlyUsedList
+  include Enumerable
 
   def initialize options = {}
     @size = options.fetch(:size) { nil }
@@ -23,12 +24,26 @@ class RecentlyUsedList
     self.<< val
   end
 
-  def over_capacity?
-    @size and @size < @list.length
+  def length
+    @list.length
   end
 
-  def method_missing(name, *args, &block)
-    @list.send(name, *args, &block)
+  def empty?
+    @list.count == 0
+  end
+
+  def each
+    @list.each do |item|
+      yield item
+    end
+  end
+
+  def [] index
+    @list[index]
+  end
+
+  def over_capacity?
+    @size and @size < @list.length
   end
 end
 
