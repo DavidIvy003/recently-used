@@ -4,6 +4,14 @@ Tests:
 To run tests, just type 'rake'
 
 
+Display Output:
+===============
+
+To run script, use: './recently_used.rb'
+
+To run with upper capacity, use: './recently_used.rb <capacity>'
+e.g.: './recently_used.rb 20' will only save 20 items
+
 Instructions:
 =============
 
