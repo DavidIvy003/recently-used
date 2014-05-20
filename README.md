@@ -12,8 +12,11 @@ To run script, use: './recently_used.rb'
 To run with upper capacity, use: './recently_used.rb <capacity>'
 e.g.: './recently_used.rb 20' will only save 20 items
 
+
 Instructions:
 =============
+
+Found on: http://cyber-dojo.org/setup/show/
 
 Develop a recently-used-list class to hold strings
 uniquely in Last-In-First-Out order.
